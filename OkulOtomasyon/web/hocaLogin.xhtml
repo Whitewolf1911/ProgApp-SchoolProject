@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Öğretmen Giriş Ekranı</title>
+    </h:head>
+    <h:body style="display: flex ; margin-top: 10% ; background-color: khaki">
+        <h:form style="margin: auto">
+            <img src="assets/hocaLogin.png" ></img>
+            <h1>Öğretmen Girişi</h1>
+
+            <h:panelGrid style="background-color: cyan" columns="2" border="1">
+                <h:outputText value="Kullanıcı Adı :"/>
+                <h:inputText id="unameInputText" required="true" autocomplete="off"
+                             requiredMessage="Lutfen Kullanici Adini Giriniz." value="#{dbBean.hocaUname}"
+                             validatorMessage="Kullanici Adi 30 karakterden az olmalidir.">
+                    <f:validateLength maximum="30" />
+                </h:inputText>
+
+                <h:outputText value="Şifre :"/>
+                <h:inputSecret  id="passwordText" required="true"
+                                requiredMessage="Lutfen Sifrenizi Giriniz."   
+                                value="#{dbBean.hocaPassword}" />
+
+            </h:panelGrid>
+            <br></br>
+            <br></br>
+
+            <h:commandButton action="#{dbBean.hocaLoginMethod()}" value="Giriş Yap"/>
+            <!-- Here submission succeeds and the variables are assigned-->
+            
+        </h:form>
+    </h:body> 
+</html>
+
+

@@ -1,0 +1,40 @@
+.float-left-child {
+  float: left;
+}
+
+.inline-block-child {
+  display: inline-block;
+}
+
+.flex-parent {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+
+.inline-flex-parent {
+  display: inline-flex;
+}
+
+/* base css */
+body {
+  padding: 3rem;
+}
+h3 {
+  margin: 1.5rem 0 0.25em;
+  clear: both;
+}
+.parent {
+  background: black;
+  padding: 1rem;
+}
+.child {
+  border: 1px solid indigo;
+  padding: 1rem;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
